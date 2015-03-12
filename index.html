@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		html, body{
+			height: 100%;
+		}
+		body {
+			background: #333333;
+			display: table;
+			margin: auto;
+		}
+		#demo {
+			display: table-cell;
+			vertical-align: middle;
+			width: 216px;
+			padding: 0;
+			margin: 0;
+			list-style: none;
+		}
+		#demo li {
+			display: block;
+			width: 11px;
+			height: 11px;
+			float: left;
+			margin: 1px 1px 0 0;
+		}
+	</style>
+</head>
+<body>
+	<ul id="demo"></ul>
+	<script>
+		var psDefaultPallete = ['ff0000', 'ffff00', '00ff00', '00ffff', '0000ff', 'ff00ff', 'ffffff', 'eeeeee', 'e5e5e5', 'dcdcdc', 'd2d2d2', 'c9c9c9', 'bfbfbf', 'b5b5b5', 'aaaaaa', 'a0a0a0', 'e60012', 'fff100',
+		'009944', '00a0e9', '1d2088', 'e4007f', '959595', '898989', '7d7d7d', '707070', '626262', '535353', '434343', '313131', '1b1b1b', '000000', 'f29b76', 'f6b37f', 'facd89', 'fff799',
+		'cce198', 'acd598', '89c997', '84ccc9', '7ecef4', '88abda', '8c97cb', '8f82bc', 'aa89bd', 'c490bf', 'f19ec2', 'f29c9f', 'ec6941', 'f19149', 'f8b551', 'fff45c', 'b3d465', '80c269',
+		'32b16c', '13b5b1', '00b7ee', '448aca', '556fb5', '5f52a0', '8957a1', 'ae5da1', 'ea68a2', 'eb6877', 'e60012', 'eb6100', 'f39800', 'fff100', '8fc31f', '22ac38', '009944', '009e96',
+		'00a0e9', '0068b7', '00479d', '1d2088', '601986', '920783', 'e4007f', 'e5004f', 'a40000', 'a84200', 'ac6a00', 'b7aa00', '638c0b', '097c25', '007130', '00736d', '0075a9', '004986',
+		'002e73', '100964', '440062', '6a005f', 'a4005b', 'a40035', '7d0000', '7f2d00', '834e00', '8a8000', '486a00', '005e15', '00561f', '005752', '005982', '003567', '001c58', '03004c',
+		'31004a', '500047', '7e0043', '7d0022', 'd1c0a5', 'a6937c', '7e6b5a', '59493f', '362e2b', 'cfa972', 'b28850', '996c33', '81511c', '6a3906'];
+		var i,ii,innerHTML = [];
+				
+		for(i=0, ii = psDefaultPallete.length; i < ii; i++) {
+			innerHTML.push('<li style="background-color: #' + psDefaultPallete[i] + '"></li>');
+		}
+
+		document.getElementById('demo').innerHTML = innerHTML.join('');
+	</script>
+</body>
+</html>
+
